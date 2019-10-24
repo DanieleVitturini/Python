@@ -1,0 +1,28 @@
+while True:
+    print("What operation you want to do?")
+    print("type: 'add' or 'sub' or 'molt' or 'div'")
+    print("Write 'quit' to end the program")
+    operation_input = input(': ')
+    if operation_input=="quit":
+        break
+    if operation_input!="add" and operation_input!="sub" and operation_input!="molt" and operation_input!="div":
+        print("Wrong operation input")
+        continue
+
+    print("Insert first number:")
+    first_input = float(input(': '))
+    print("Insert second number:")
+    second_input = float(input(': '))
+    
+    x=first_input
+    y=second_input
+    
+    
+    if operation_input=="add":
+        print("result: "+str(x+y))    
+    elif operation_input=="sub":
+        print("result: "+str(x-y))
+    elif operation_input=="molt":
+        print("result: "+str(x*y))
+    elif operation_input=="div":
+        print("result: "+str(x/y))
