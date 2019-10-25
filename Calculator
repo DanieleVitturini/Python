@@ -1,3 +1,5 @@
+#simple calculator
+
 while True:
     print("What operation you want to do?")
     print("type: 'add' or 'sub' or 'molt' or 'div'")
