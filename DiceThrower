@@ -1,0 +1,37 @@
+import random
+import math
+
+tiro=[]
+n=0
+faces=0
+def dicethrow(n, faces):
+    while True:
+        n=int(input("How many dices you want to simulate? Insert 0 to exit the program.", ))
+        if n==0:
+            break
+        print("What type of dice you want to simulate?")
+        print("Write '4' for d4")
+        print("Write '6' for d6")
+        print("Write '8' for d8")
+        print("Write '10' for d10")
+        print("Write '12' for d12")
+        print("Write '20' for d20")
+        print("Write '100' for d100")
+        faces=int(input())
+        print("You choose d",faces)
+        if faces!=4 and faces!=6 and faces!=8 and faces!=10 and faces!=12 and faces!=20 and faces!=100:
+            print("Wrong type of dice")
+            continue
+        if faces==4 or faces==6 or faces==8 or faces==10 or faces==12 or faces==20 or faces==100:
+            for i in range(n):
+                dicevalue = random.randint(1,faces)
+                tiro.append(int(dicevalue))
+                i +=1
+                print(dicevalue)
+                print(tiro)
+            tiro.remove(min(tiro))
+            print(tiro)
+            print("Total score:", sum(tiro))
+            tiro.clear()
+                
+dicethrow(n,faces)
